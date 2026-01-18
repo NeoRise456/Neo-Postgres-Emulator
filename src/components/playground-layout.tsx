@@ -16,7 +16,8 @@ import { QueryHistory } from '@/components/query-history';
 import { KeyboardShortcuts } from '@/components/keyboard-shortcuts';
 import { DatabaseTools } from '@/components/database-tools';
 import { LoadingScreen } from '@/components/loading-screen';
-import { Code, GitBranch, Database, History } from 'lucide-react';
+import { Code, GitBranch, Database, History, Github } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 // Hoisted static JSX elements to avoid re-creation
 const connectionIndicator = (
@@ -48,6 +49,21 @@ const Header = memo(function Header() {
       <div className="flex items-center gap-4">
         <DatabaseTools />
         <KeyboardShortcuts />
+        <Button
+          variant="ghost"
+          size="icon-sm"
+          asChild
+          className="text-muted-foreground hover:text-cyan-400"
+        >
+          <a
+            href="https://github.com/NeoRise456/Neo-Postgres-Emulator"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View on GitHub"
+          >
+            <Github className="h-4 w-4" />
+          </a>
+        </Button>
         {connectionIndicator}
       </div>
     </header>
