@@ -30,6 +30,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production \
     PORT=3000 \
+    NEXT_PUBLIC_SITE_URL="https://postgres-emulator.neorise.cloud/" \
     HOSTNAME="0.0.0.0"
 
 RUN groupadd --system --gid 1001 nodejs && \
