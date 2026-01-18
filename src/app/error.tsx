@@ -1,17 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import { Database } from 'lucide-react';
-
-// Hoisted static logo JSX
-const logo = (
-  <div className="flex items-center gap-3 mb-8">
-    <Database className="h-10 w-10 text-cyan-400" />
-    <span className="font-mono text-2xl font-bold text-cyan-400">
-      Neo&apos;s Postgres Emulator
-    </span>
-  </div>
-);
 
 export default function Error({
   error,
@@ -26,12 +15,32 @@ export default function Error({
 
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#050505]">
-      {logo}
+      <div className="flex items-center gap-3 mb-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="text-cyan-400"
+        >
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+          <path d="M3 12A9 3 0 0 0 21 12" />
+        </svg>
+        <span className="font-mono text-2xl font-bold text-cyan-400">
+          Neo&apos;s Postgres Emulator
+        </span>
+      </div>
       
       <h1 className="font-mono text-4xl font-bold text-white mb-2">
         Something went wrong
       </h1>
-      <p className="font-mono text-sm text-muted-foreground mb-8 max-w-md text-center">
+      <p className="font-mono text-sm text-neutral-500 mb-8 max-w-md text-center">
         An unexpected error occurred. Please try again.
       </p>
       
