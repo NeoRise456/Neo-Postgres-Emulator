@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Neo's Postgres Emulator",
   description: "A fully client-side PostgreSQL emulator powered by PGlite and WebAssembly",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  openGraph: {
+    images: "/metadata-pic.png"
+  }
 };
 
 export default function RootLayout({
